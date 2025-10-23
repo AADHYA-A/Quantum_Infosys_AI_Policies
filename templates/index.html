@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PolicyNav | Explore Public Policies</title>
+
+<style>
+/* ===== BODY & GENERAL ===== */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #e8f0fe, #fefefe);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    color: #222;
+}
+
+/* ===== NAVBAR ===== */
+nav {
+    width: 100%;
+    background-color: #0052D4;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+}
+nav .logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+    text-decoration: none;
+}
+
+/* ===== PAGE TITLE ===== */
+h1 {
+    margin-top: 100px;
+    font-size: 2.2rem;
+    background: linear-gradient(90deg, #0052D4, #4364F7, #6FB1FC);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+    text-align: center;
+}
+
+/* ===== CONTAINER & BUTTON CARDS ===== */
+.container {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    width: 90%;
+    max-width: 1000px;
+}
+.button-card {
+    background: #fff;
+    border-radius: 15px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    border-left: 6px solid #2980b9;
+}
+.button-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+button {
+    background: linear-gradient(90deg, #0072ff, #00c6ff);
+    border: none;
+    padding: 12px 25px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 15px;
+    color: white;
+    font-weight: 600;
+}
+button:hover {
+    background: linear-gradient(90deg, #0052D4, #4364F7);
+}
+</style>
+</head>
+
+<body>
+
+<!-- ===== NAVBAR ===== -->
+<nav>
+    <a href="/" class="logo">PolicyNav</a>
+</nav>
+
+<h1>🔎 PolicyNav — Explore Public Policies by Category</h1>
+
+<div class="container">
+    <!-- Education -->
+    <div class="button-card">
+        <h3>🎓 Education Policies</h3>
+        <p>Explore government schemes and policies promoting education and learning.</p>
+        <form method="get" action="/education">
+            <input type="hidden" name="category" value="education">
+            <button type="submit">View Education Policies</button>
+        </form>
+    </div>
+
+    <!-- Healthcare -->
+    <div class="button-card">
+        <h3>🏥 Healthcare Policies</h3>
+        <p>Discover initiatives improving healthcare access and medical infrastructure.</p>
+        <form method="get" action="/healthcare">
+            <input type="hidden" name="category" value="healthcare">
+            <button type="submit">View Healthcare Policies</button>
+        </form>
+    </div>
+
+    <!-- Agriculture -->
+    <div class="button-card">
+        <h3>🌾 Agriculture Policies</h3>
+        <p>Learn about programs supporting farmers and sustainable agriculture.</p>
+        <form method="get" action="/agriculture">
+            <input type="hidden" name="category" value="agriculture">
+            <button type="submit">View Agriculture Policies</button>
+        </form>
+    </div>
+
+    <!-- Women Empowerment -->
+    <div class="button-card">
+        <h3>👩‍💼 Women Empowerment</h3>
+        <p>Find schemes that empower and uplift women across India.</p>
+        <form method="get" action="/women">
+            <input type="hidden" name="category" value="women">
+            <button type="submit">View Women Policies</button>
+        </form>
+    </div>
+
+    <!-- Employment -->
+    <div class="button-card">
+        <h3>💼 Employment & Skill Development</h3>
+        <p>Access opportunities for jobs, training, and entrepreneurship support.</p>
+        <form method="get" action="/employment">
+            <input type="hidden" name="category" value="employment">
+            <button type="submit">View Employment Policies</button>
+        </form>
+    </div>
+
+    <!-- Quantum Technology -->
+    <div class="button-card">
+        <h3>⚛ Quantum Technology Policies</h3>
+        <p>Explore initiatives advancing quantum computing, communication, and research in India.</p>
+        <form method="get" action="/quantum">
+            <input type="hidden" name="category" value="quantum">
+            <button type="submit">View Quantum Policies</button>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>
